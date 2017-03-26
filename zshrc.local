@@ -1,0 +1,36 @@
+# mvn
+export M2_HOME="$HOME/maven"
+export M2="$M2_HOME/bin"
+
+export PATH=$M2:$PATH
+#export MAVEN_OPTS=-Xms256m -Xmx512m
+
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"
+alias jenv_set_java_home='export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"'
+
+
+# TODO
+# if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+# [[ -s ~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.sh ]] && . ~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.sh
+
+
+export PATH="$(brew --prefix svn)/bin":$PATH
+export PATH="$(brew --prefix git)":$PATH
+
+# Android
+export ANDROID_HOME=~/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+
+# git config
+GIT_AUTHOR_NAME="jiewei.ljw"
+GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+GIT_AUTHOR_EMAIL="jiewei.ljw@alibaba-inc.com"
+GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+#git config --global user.name "$GIT_AUTHOR_NAME"
+#git config --global user.email "$GIT_AUTHOR_EMAIL"
+
+export PATH="$PATH:`yarn global bin`"
